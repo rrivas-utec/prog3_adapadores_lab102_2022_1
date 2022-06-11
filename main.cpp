@@ -225,6 +225,23 @@ void ejemplo_13() {
     cout << endl;
 }
 
+template <typename T>
+stack<T> join_stacks(const stack<T>& a, const stack<T>& b) {
+
+}
+
+void ejemplo_14() {
+    deque<int> d1 = {1, 5, 4, 2};
+    deque<int> d2 = {10, 50, 40, 20};
+    stack<int> s1(d1);
+    stack<int> s2(d2);
+    auto result = join_stacks(s1, s2);
+    for_adapter(result, [](auto value) {
+        cout << value << " ";
+    });
+    cout << endl;
+}
+
 int main(int argc, char **argv) {
 //    ejemplo_1();
 //    ejemplo_2();
